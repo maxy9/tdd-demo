@@ -21,10 +21,8 @@ describe('Mars Rover', () => {
     })
 
     describe("When instructed to turn left", () => {
-      const directive = "L";
-
       it("Should face the correct direction but not change position", () => {
-        assert.deepEqual(moveRover(directive), {
+        assert.deepEqual(moveRover("L"), {
           coordinates: [4, 7],
           direction: "West",
         });
@@ -32,10 +30,8 @@ describe('Mars Rover', () => {
     });
 
     describe("When instructed to turn right", () => {
-      const directive = "R";
-
       it("Should face the correct direction but not change position", () => {
-        assert.deepEqual(moveRover(directive), {
+        assert.deepEqual(moveRover("R"), {
           coordinates: [4, 7],
           direction: "East",
         });
@@ -43,11 +39,18 @@ describe('Mars Rover', () => {
     });
 
     describe("When instructed to move forward", () => {
-      const directive = "F";
-
-      it("Should increase the y coordinate by 1", () => {
-        assert.deepEqual(moveRover(directive), {
+      it("Should decrease the y coordinate by 1", () => {
+        assert.deepEqual(moveRover("F"), {
           coordinates: [4, 8],
+          direction,
+        });
+      });
+    });
+
+    describe("When instructed to move back", () => {
+      it("Should increase the y coordinate by 1", () => {
+        assert.deepEqual(moveRover("B"), {
+          coordinates: [4, 6],
           direction,
         });
       });
@@ -62,10 +65,8 @@ describe('Mars Rover', () => {
     });
 
     describe("When instructed to turn left", () => {
-      const directive = "L";
-
       it("Should face the correct direction but not change position", () => {
-        assert.deepEqual(moveRover(directive), {
+        assert.deepEqual(moveRover("L"), {
           coordinates: [4, 7],
           direction: "North",
         });
@@ -73,10 +74,8 @@ describe('Mars Rover', () => {
     });
 
     describe("When instructed to turn right", () => {
-      const directive = "R";
-
       it("Should face the correct direction but not change position", () => {
-        assert.deepEqual(moveRover(directive), {
+        assert.deepEqual(moveRover("R"), {
           coordinates: [4, 7],
           direction: "South",
         });
@@ -92,10 +91,8 @@ describe('Mars Rover', () => {
     });
 
     describe("When instructed to turn left", () => {
-      const directive = "L";
-
       it("Should face the correct direction but not change position", () => {
-        assert.deepEqual(moveRover(directive), {
+        assert.deepEqual(moveRover("L"), {
           coordinates: [4, 7],
           direction: "East",
         });
@@ -103,10 +100,8 @@ describe('Mars Rover', () => {
     });
 
     describe("When instructed to turn right", () => {
-      const directive = "R";
-
       it("Should face the correct direction but not change position", () => {
-        assert.deepEqual(moveRover(directive), {
+        assert.deepEqual(moveRover("R"), {
           coordinates: [4, 7],
           direction: "West",
         });
@@ -122,10 +117,8 @@ describe('Mars Rover', () => {
     });
 
     describe("When instructed to turn left", () => {
-      const directive = "L";
-
       it("Should face the correct direction but not change position", () => {
-        assert.deepEqual(moveRover(directive), {
+        assert.deepEqual(moveRover("L"), {
           coordinates: [4, 7],
           direction: "South",
         });
@@ -133,10 +126,8 @@ describe('Mars Rover', () => {
     });
 
     describe("When instructed to turn right", () => {
-      const directive = "R";
-
       it("Should face the correct direction but not change position", () => {
-        assert.deepEqual(moveRover(directive), {
+        assert.deepEqual(moveRover("R"), {
           coordinates: [4, 7],
           direction: "North",
         });
