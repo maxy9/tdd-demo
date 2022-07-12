@@ -1,11 +1,10 @@
-
-let roverCoordinates = [0,0];
-let roverDirection = 'North';
+let roverCoordinates = [0, 0];
+let roverDirection = "North";
 
 const dropRover = (coordinates, direction) => {
   roverCoordinates = coordinates;
   roverDirection = direction;
-    return { coordinates: roverCoordinates, direction: roverDirection };
+  return { coordinates: roverCoordinates, direction: roverDirection };
 };
 
 const directionChanges = {
