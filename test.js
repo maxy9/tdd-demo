@@ -55,6 +55,31 @@ describe('Mars Rover', () => {
         });
       });
     });
+
+    describe("When instructed to perform multiple instructions", () => {
+      it("Should move and change direction accordingly", () => {
+        assert.deepEqual(moveRover("BBFFRRLLRTTTTRBBFFFFF"), {
+          coordinates: [4, 4],
+          direction: "South",
+        });
+      });
+    });
+
+    describe("When instructed to perform multiple instructions", () => {
+      it("Should move and change direction accordingly", () => {
+        assert.deepEqual(moveRover("FFFFFFRFFFFFF"), {
+          coordinates: [10, 13],
+          direction: "East",
+        });
+      });
+
+      it("Should ignore invalid directions", () => {
+        assert.deepEqual(moveRover("FA"), {
+          coordinates: [4, 8],
+          direction: "North",
+        });
+      });
+    });
   });
   
   describe("When facing east", () => {
