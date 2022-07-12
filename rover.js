@@ -36,18 +36,6 @@ const moveRover = (directives) => {
 
   return { coordinates: roverCoordinates, direction: roverDirection };
 };
-const moveRover_backup = (directive) => {
-  roverDirection =
-    directionChanges[roverDirection][directive] ?? roverDirection;
-
-  const index = positionChanges[roverDirection].coordinatesArrayIndex;
-  const positionValue = roverCoordinates[index];
-  roverCoordinates[index] = positionChanges[roverDirection][directive]
-    ? positionValue + positionChanges[roverDirection][directive]
-    : roverCoordinates[index];
-
-  return { coordinates: roverCoordinates, direction: roverDirection };
-};
 
 module.exports = {
   dropRover,
