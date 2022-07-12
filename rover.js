@@ -18,8 +18,8 @@ const directionChanges = {
 const positionChanges = {
   North: { coordinatesArrayIndex: 1, F: +1, B: -1 },
   East: { coordinatesArrayIndex: 0, F: +1, B: -1 },
-  South: { coordinatesArrayIndex: 1, F: +1, B: -1 },
-  West: { coordinatesArrayIndex: 0, F: +1, B: -1 },
+  South: { coordinatesArrayIndex: 1, F: -1, B: +1 },
+  West: { coordinatesArrayIndex: 0, F: -1, B: +1 },
 };
 
 const moveRover = (directives) => {

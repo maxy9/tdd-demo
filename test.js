@@ -81,6 +81,24 @@ describe('Mars Rover', () => {
         });
       });
     });
+
+    describe("When instructed to move forward", () => {
+      it("Should decrease the y coordinate by 1", () => {
+        assert.deepEqual(moveRover("F"), {
+          coordinates: [5, 7],
+          direction,
+        });
+      });
+    });
+
+    describe("When instructed to move back", () => {
+      it("Should increase the y coordinate by 1", () => {
+        assert.deepEqual(moveRover("B"), {
+          coordinates: [3, 7],
+          direction,
+        });
+      });
+    });
   });
   
   describe("When facing south", () => {
@@ -107,6 +125,24 @@ describe('Mars Rover', () => {
         });
       });
     });
+
+    describe("When instructed to move forward", () => {
+      it("Should decrease the y coordinate by 1", () => {
+        assert.deepEqual(moveRover("F"), {
+          coordinates: [4, 6],
+          direction,
+        });
+      });
+    });
+
+    describe("When instructed to move back", () => {
+      it("Should increase the y coordinate by 1", () => {
+        assert.deepEqual(moveRover("B"), {
+          coordinates: [4, 8],
+          direction,
+        });
+      });
+    });
   });
   
   describe("When facing west", () => {
@@ -130,6 +166,24 @@ describe('Mars Rover', () => {
         assert.deepEqual(moveRover("R"), {
           coordinates: [4, 7],
           direction: "North",
+        });
+      });
+    });
+
+    describe("When instructed to move forward", () => {
+      it("Should decrease the y coordinate by 1", () => {
+        assert.deepEqual(moveRover("F"), {
+          coordinates: [3, 7],
+          direction,
+        });
+      });
+    });
+
+    describe("When instructed to move back", () => {
+      it("Should increase the y coordinate by 1", () => {
+        assert.deepEqual(moveRover("B"), {
+          coordinates: [5, 7],
+          direction,
         });
       });
     });
